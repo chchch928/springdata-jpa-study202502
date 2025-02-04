@@ -2,6 +2,7 @@ package com.study.jpa.chap02.repository;
 
 import com.study.jpa.chap02.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 import java.util.UUID;
@@ -26,5 +27,8 @@ public interface StudentRepository extends JpaRepository<Student,String > {
     // where age <= ?
 //    List<Student> findByAgeLessThanEqual(int age);
 
-
+    // JPQL 사용하기
+    // 도시이름으로 학생정보 조회
+    @Query("SELECT st FROM Student st WHERE st.city = ?1")
+    List<Student>getStudentsByName(String name, String city);
 }

@@ -90,6 +90,17 @@ class StudentRepositoryTest {
         //then
         students.forEach(System.out::println);
     }
+    @Test
+    @DisplayName("순수 SQL로 학생정보 조회")
+    void nativeSQLTest() {
+        //given
+        String name = "쿠로미";
+        String city = "청양군";
+        //when
+        List<Student> studentList = studentRepository.getStudentsByName(name, city);
+        //then
+        studentList.forEach(System.out::println);
+    }
 
 
 
