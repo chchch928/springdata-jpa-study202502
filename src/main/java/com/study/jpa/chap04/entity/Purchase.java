@@ -7,13 +7,13 @@ import lombok.*;
 
     @Getter
     @Setter
-    @ToString
+    @ToString(exclude = {"user", "goods"})
     @EqualsAndHashCode
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
 
-// 상품 엔터티
+// 구매 엔터티 N
     @Entity
     @Table(name = "tbl_mtm_purchase")
     public class Purchase {

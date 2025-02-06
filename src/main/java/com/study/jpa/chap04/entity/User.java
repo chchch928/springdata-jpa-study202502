@@ -7,13 +7,13 @@ import java.util.List;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"purchases"})
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 
-// 회원 엔터티
+// 회원 엔터티 1
 @Entity
 @Table(name = "tbl_mtm_user")
 public class User {

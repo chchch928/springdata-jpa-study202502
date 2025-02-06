@@ -8,13 +8,13 @@ import java.util.List;
 
 @Getter
 @Setter
-@ToString
+@ToString(exclude = {"purchases"})
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 
-// 상품 엔터티
+// 상품 엔터티 1
 @Entity
 @Table(name = "tbl_mtm_goods")
 public class Goods {
