@@ -9,8 +9,8 @@ import lombok.*;
 @Getter
 @ToString(exclude = "group")
 @EqualsAndHashCode(of = "id")
-@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Idol {
 
     @Id
@@ -34,7 +34,6 @@ public class Idol {
             changeGroup(group);
         }
     }
-
 
     public void changeGroup(Group group) {
         this.group = group;

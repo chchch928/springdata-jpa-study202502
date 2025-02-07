@@ -1,6 +1,5 @@
 package com.study.jpa.chap05.entity;
 
-import com.study.jpa.chap05.entity.Idol;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,12 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "tbl_group")
+
 @Setter
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString(exclude = {"idols"})
 @EqualsAndHashCode(of = "id")
-@Table(name = "tbl_group")
 public class Group {
 
     @Id

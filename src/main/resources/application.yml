@@ -28,5 +28,4 @@ logging:
         jpa: debug
     org:
       hibernate:
-        SQL: debug
-
+        SQL: info
